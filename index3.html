@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhura Badave - Resume</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome & Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <!-- jQuery & Bootstrap Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #d7e3fc, #ffffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Welcome Page */
+        .welcome-page {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .welcome-text {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .typing-effect::after {
+            content: "|";
+            animation: typing 1.5s steps(3) infinite;
+        }
+
+        @keyframes typing {
+            0% { content: "|"; }
+            33% { content: " |"; }
+            66% { content: "  |"; }
+            100% { content: "   |"; }
+        }
+
+        .enter-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 18px;
+            background: white;
+            color: #1a1a2e;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .enter-btn:hover {
+            background: #162447;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Resume Content */
+        .resume-container {
+            display: none;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            width: 260px;
+            height: 100%;
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sidebar img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid white;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 12px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .section {
+            width: 100%;
+            padding: 50px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-weight: 600;
+            font-size: 2rem;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Page -->
+    <div class="welcome-page" id="welcomePage">
+        <h1 class="welcome-text">Welcome to My Resume</h1>
+        <h2 class="typing-effect">Madhura Badave</h2>
+        <button class="enter-btn" onclick="showResume()">Enter</button>
+    </div>
+
+    <!-- Resume Content -->
+    <div class="resume-container" id="resumeContainer">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="MyPhoto.jpg" alt="Madhura Badave">
+            <h2>Madhura Badave</h2>
+            <a href="#personal-info"><i class="fas fa-user"></i> Personal Info</a>
+            <a href="#objective"><i class="fas fa-lightbulb"></i> Objective</a>
+            <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="#skills"><i class="fas fa-code"></i> Technical Skills</a>
+            <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div id="personal-info" class="section">
+                <h2>Personal Information</h2>
+                <p><strong>Madhura Vijaykumar Badave</strong></p>
+                <p><i class="fas fa-calendar"></i> Birth Date: 28-08-2004</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Shriram Chowk, Hadapsar, Pune 411028</p>
+            </div>
+
+            <div id="objective" class="section">
+                <h2>Objective</h2>
+                <p>Motivated third-year IT student eager to enhance skills and gain experience in cutting-edge technologies.</p>
+            </div>
+
+            <div id="education" class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li>Pursuing BE in IT (3rd Year) - PDEA’s College of Engineering Manjari, Pune (CGPA 5th Sem: 9.14)</li>
+                    <li>HSC (12th) - 73.33% (2022)</li>
+                    <li>SSC (10th) - 96.80% (2020)</li>
+                </ul>
+            </div>
+
+            <div id="skills" class="section">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>C Programming, Basics of C++</li>
+                    <li>Python Programming, OOPs Concepts</li>
+                    <li>Machine Learning (scikit-learn, basic algorithms)</li>
+                    <li>Microsoft Office (Word, PowerPoint)</li>
+                    <li>HTML, CSS</li>
+                    <li>Learning Java</li>
+                </ul>
+            </div>
+
+            <div id="certifications" class="section">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>C Programming Certification - Seed Infotech</li>
+                    <li>Python, Data Analytics, AI - Code Unnati Program</li>
+                    <li>C++ Programming - Great Learning</li>
+                    <li>Enterprise Data Science, Cloud Solutions - IBM</li>
+                </ul>
+            </div>
+
+            <div id="contact" class="section">
+                <h2>Contact</h2>
+                <p><i class="fas fa-phone"></i> <a href="tel:+918530615330">+91 8530615330</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:badavemadhura@gmail.com">badavemadhura@gmail.com</a></p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/madhura-badave-9069982b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/MadhuraB08" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showResume() {
+            document.getElementById("welcomePage").style.display = "none";
+            document.getElementById("resumeContainer").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
