@@ -1,0 +1,36 @@
+/* Custom styles that override/extend Bootstrap */
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.income-item {
+    border-left: 4px solid #198754 !important; /* Green */
+}
+
+.expense-item {
+    border-left: 4px solid #dc3545 !important; /* Red */
+}
+
+.transaction-item:hover {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .filter-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
